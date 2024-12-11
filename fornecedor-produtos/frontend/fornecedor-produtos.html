@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Associação de Fornecedor a Produto</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Associação de Fornecedor a Produto</h1>
+      <button id="btn-voltar">Voltar</button>
+    </header>
+
+    <section class="detalhes-produto">
+      <h2>Detalhes do Produto</h2>
+      <p><strong>Nome do Produto:</strong> <span id="nome-produto">Produto Exemplo</span></p>
+      <p><strong>Código de Barras:</strong> <span id="codigo-barras">1234567890123</span></p>
+      <p><strong>Descrição:</strong> <span id="descricao-produto">Descrição breve do produto</span></p>
+      <div class="imagem-produto">
+        <img src="imagens/produto-exemplo.jpg" alt="Imagem do Produto" id="imagem-produto">
+      </div>
+    </section>
+
+    <section class="associacao-fornecedor">
+      <h2>Associação de Fornecedor</h2>
+      <form id="form-associar-fornecedor" class="form">
+        <div class="form-group">
+          <label for="fornecedor">Selecione um Fornecedor:</label>
+          <select id="fornecedor" name="fornecedor" required>
+            <option value="" disabled selected>Selecione um fornecedor</option>
+            <option value="1">Fornecedor A (CNPJ: 00.000.000/0001-00)</option>
+            <option value="2">Fornecedor B (CNPJ: 11.111.111/0001-11)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-associar">Associar Fornecedor</button>
+      </form>
+    </section>
+
+    <section class="fornecedores-associados">
+      <h2>Fornecedores Associados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome do Fornecedor</th>
+            <th>CNPJ</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-fornecedores">
+          <tr>
+            <td>Fornecedor A</td>
+            <td>00.000.000/0001-00</td>
+            <td><button class="btn-desassociar">Desassociar</button></td>
+          </tr>
+          <tr>
+            <td>Fornecedor B</td>
+            <td>11.111.111/0001-11</td>
+            <td><button class="btn-desassociar">Desassociar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- Inclusão do script externo -->
+  <script src="javascript/script.js"></script>
+</body>
+</html>
